@@ -1,0 +1,20 @@
+{
+  "name": "Jumping Game",
+  "short_name": "Jumping Game",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0000ff",
+  "icons": [
+    {
+      "src": "player192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "player512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

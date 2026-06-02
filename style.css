@@ -1,0 +1,11 @@
+#player{
+    width: 3cm ;
+    height: 3cm ;
+    position: absolute;
+    transition: 1s ;
+}
+#matar, #matar2, #matar3 {
+    width: 3cm ;
+    height: 3cm ;
+    position: absolute;
+}
