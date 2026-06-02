@@ -61,15 +61,15 @@ document.addEventListener("keydown", (e) => {
 });
 function gameLoop() {
 if(colide(matar, player)) {
-    alert('Perdeu!')
+    alert('Você perdeu!')
     location.reload() ;
 }
 if (colide(matar2, player)) {
-    alert('Perdeu!')
+    alert('Você perdeu!')
     location.reload() ;
 }
 if (colide(matar3, player)) {
-    alert('Perdeu!')
+    alert('Você perdeu!')
     location.reload() ;
 }
      requestAnimationFrame(gameLoop);
