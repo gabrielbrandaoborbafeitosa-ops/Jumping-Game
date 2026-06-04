@@ -27,6 +27,7 @@ const velocidade = 5;
 document.addEventListener("keydown", (e) => {
     if (e.code === "ArrowUp") {
            if (e.code === "ArrowUp") {
+            e.preventDefault();
         if (pulando == false) {
             pulando = true;
             y -= 100;
@@ -40,12 +41,15 @@ document.addEventListener("keydown", (e) => {
     }
     }
     if (e.code === "ArrowLeft") {
+        e.preventDefault();
         x -= velocidade;
     }
     if (e.code === "ArrowRight") {
+        e.preventDefault();
         x += velocidade;
     }
     if (e.code === "Space") {
+        e.preventDefault();
         if (pulando == false) {
             pulando = true;
             y -= 100;
