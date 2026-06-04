@@ -18,6 +18,7 @@ const player = document.querySelector("#player");
 const matar = document.getElementById('matar') ;
 const matar2 = document.getElementById('matar2') ;
 const matar3 = document.getElementById('matar3') ;
+const matar4 = document.getElementById('matar4') ;
 let pulando = false ;
 let x = 100;
 let y = 100;
@@ -69,6 +70,10 @@ if (colide(matar2, player)) {
     location.reload() ;
 }
 if (colide(matar3, player)) {
+    alert('Você perdeu!')
+    location.reload() ;
+}
+if (colide(matar4, player)) {
     alert('Você perdeu!')
     location.reload() ;
 }
