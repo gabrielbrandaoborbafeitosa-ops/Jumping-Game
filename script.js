@@ -94,4 +94,6 @@ if (colide(matar4, player)) {
  const celular = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
  if (celular) {
     alert('Erro\nEsse site não está disponível para:\nAndroid, Iphone, Ipad, Ipod e Mobiles.\nTente abrir esse site no computador.')
+ } else {
+    alert('Bem vindo!')
  }
