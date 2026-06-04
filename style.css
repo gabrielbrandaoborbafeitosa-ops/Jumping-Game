@@ -9,3 +9,6 @@
     height: 3cm ;
     position: absolute;
 }
+body {
+    overflow: hidden;
+}
