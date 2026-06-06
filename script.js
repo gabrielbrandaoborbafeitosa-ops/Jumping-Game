@@ -131,7 +131,7 @@ botaocima.onclick = function () {
 
 document.body.appendChild(botaoleft);
 document.body.appendChild(botaocima);
-    alert('Bem vindo!\nVersão do jogo: v0.3.0\n(Você está um dispositivo móvel)')
+    alert('Bem vindo!\nVersão do jogo: v0.1.1\n(Você está um dispositivo móvel)')
  } else {
-    alert('Bem vindo!\nVersão do jogo: v0.3.0\n(Você está no computador)')
+    alert('Bem vindo!\nVersão do jogo: v0.1.1\n(Você está no computador)')
  }
