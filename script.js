@@ -100,5 +100,5 @@ if (colide(matar5, player)) {
  if (celular) {
     alert('Erro\nEsse site não está disponível para:\nAndroid, Iphone, Ipad, Ipod e Mobiles.\nTente abrir esse site no computador.')
  } else {
-    alert('Bem vindo!\nVersão: v1.0.0')
+    alert('Bem vindo!\nVersão: v4.0.0')
  }
