@@ -98,7 +98,40 @@ if (colide(matar5, player)) {
  }
  const celular = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
  if (celular) {
-    alert('Erro\nEsse site não está disponível para:\nAndroid, Iphone, Ipad, Ipod e Mobiles.\nTente abrir esse site no computador.')
+    let botaoright = document.createElement("button");
+
+botaoright.textContent = "→";
+
+botaoright.onclick = function () {
+        x += velocidade;
+        player.style.left = x + "px";
+};
+
+document.body.appendChild(botaoright);
+     let botaoleft = document.createElement("button");
+
+botaoleft.textContent = "←";
+
+botaoleft.onclick = function () {
+        x -= velocidade;
+        player.style.left = x + "px";
+};
+     let botaocima = document.createElement("button");
+
+botaocima.textContent = "↑";
+
+botaocima.onclick = function () {
+ y -= 100;
+        player.style.top = y + "px";
+        setTimeout(() => {
+            y += 100;
+            player.style.top = y + "px";
+        }, 4000);
+};
+
+document.body.appendChild(botaoleft);
+document.body.appendChild(botaocima);
+    alert('Bem vindo!\nVersão do jogo: v0.3.0\n(Você está um dispositivo móvel)')
  } else {
-    alert('Bem vindo!\nVersão: v4.0.0')
+    alert('Bem vindo!\nVersão do jogo: v0.3.0\n(Você está no computador)')
  }
