@@ -27,7 +27,6 @@ const velocidade = 5;
 
 document.addEventListener("keydown", (e) => {
     if (e.code === "ArrowUp") {
-           if (e.code === "ArrowUp") {
             e.preventDefault();
         if (pulando == false) {
             pulando = true;
@@ -39,7 +38,7 @@ document.addEventListener("keydown", (e) => {
             pulando = false ;
         }, 4000);
         }
-    }
+    
     }
     if (e.code === "ArrowLeft") {
         e.preventDefault();
@@ -86,6 +85,7 @@ if (colide(matar5, player)) {
     alert('Você perdeu!')
     location.reload() ;
 }
+
      requestAnimationFrame(gameLoop);
 }
  requestAnimationFrame(gameLoop);
@@ -131,7 +131,7 @@ botaocima.onclick = function () {
 
 document.body.appendChild(botaoleft);
 document.body.appendChild(botaocima);
-    alert('Bem vindo!\nVersão do jogo: v0.1.1\n(Você está um dispositivo móvel)')
+    alert('Bem vindo!\nVersão do jogo: v0.0.1\n(Você está um dispositivo móvel)')
  } else {
-    alert('Bem vindo!\nVersão do jogo: v0.1.1\n(Você está no computador)')
+    alert('Bem vindo!\nVersão do jogo: v0.0.1\n(Você está no computador)')
  }
