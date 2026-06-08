@@ -131,7 +131,20 @@ botaocima.onclick = function () {
 
 document.body.appendChild(botaoleft);
 document.body.appendChild(botaocima);
-    alert('Bem vindo!\nVersão do jogo: v0.1.4\n(Você está um dispositivo móvel)')
+    alert('Bem vindo!\nVersão do jogo: v0.1.5\n(Você está um dispositivo móvel)')
  } else {
-    alert('Bem vindo!\nVersão do jogo: v0.1.4\n(Você está no computador)')
+    alert('Bem vindo!\nVersão do jogo: v0.1.5\n(Você está no computador)')
  }
+ //salvar nome
+ let nome = localStorage.getItem("nome");
+if (!nome) {
+    nome = prompt("Digite seu nome:");
+    localStorage.setItem("nome", nome);
+}
+//usar o nome
+document.getElementById('txtnome').innerText = 'Olá, ' + nome + '! Bem vindo ao Jumping Game!'
+function apagardados() {
+    if (prompt("Se quer apagar todos os dados salvos, digite exatamente “aghu” para confirmar")=== "aghu") {
+     localStorage.clear() ;
+}
+}
