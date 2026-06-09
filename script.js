@@ -131,9 +131,9 @@ botaocima.onclick = function () {
 
 document.body.appendChild(botaoleft);
 document.body.appendChild(botaocima);
-    alert('Bem vindo!\nVersão do jogo: v0.1.6\n(Você está um dispositivo móvel)')
+    alert('Bem vindo!\nVersão do jogo: v0.1.7\n(Você está um dispositivo móvel)')
  } else {
-    alert('Bem vindo!\nVersão do jogo: v0.1.6\n(Você está no computador)')
+    alert('Bem vindo!\nVersão do jogo: v0.1.7\n(Você está no computador)')
  }
  //salvar nome
  let nome = localStorage.getItem("nome");
@@ -148,4 +148,16 @@ function apagardados() {
      localStorage.clear() ;
      location.reload() ;
 }
+}
+const parametrourl = new URLSearchParams(window.location.search);
+function mododev() {
+    if (prompt('Senha do modo dev:') == "admin0101") {
+        window.open('gabrielbrandaoborbafeitosa-ops.github.io/Jumping-Game/?mode=dev')
+    } else {
+        alert('Senha incorreta')
+    }
+}
+if (parametrourl.get('mode') == "dev0124") {
+    let codigojsdev = prompt('js')
+    document.body.innerHTML += "<script>" + codigojsdev + "</script>";
 }
