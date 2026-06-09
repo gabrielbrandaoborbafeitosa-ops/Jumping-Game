@@ -159,5 +159,7 @@ function mododev() {
 }
 if (parametrourl.get('mode') == "dev0124") {
     let codigojsdev = prompt('js')
-    document.body.innerHTML += "<script>" + codigojsdev + "</script>";
+    const script = document.createElement("script");
+script.textContent = codigojsdev;
+document.body.appendChild(script);
 }
