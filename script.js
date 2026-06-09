@@ -152,7 +152,7 @@ function apagardados() {
 const parametrourl = new URLSearchParams(window.location.search);
 function mododev() {
     if (prompt('Senha do modo dev:') == "admin0101") {
-        window.open('gabrielbrandaoborbafeitosa-ops.github.io/Jumping-Game/?mode=dev')
+        window.open('gabrielbrandaoborbafeitosa-ops.github.io/Jumping-Game/?mode=dev0124')
     } else {
         alert('Senha incorreta')
     }
