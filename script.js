@@ -131,9 +131,9 @@ botaocima.onclick = function () {
 
 document.body.appendChild(botaoleft);
 document.body.appendChild(botaocima);
-    alert('Bem vindo!\nVersão do jogo: v0.1.78n(Você está um dispositivo móvel)')
+    alert('Bem vindo!\nVersão do jogo: v0.1.9 (Você está um dispositivo móvel)')
  } else {
-    alert('Bem vindo!\nVersão do jogo: v0.1.8\n(Você está no computador)')
+    alert('Bem vindo!\nVersão do jogo: v0.1.9\n(Você está no computador)')
  }
  //salvar nome
  let nome = localStorage.getItem("nome");
@@ -164,7 +164,7 @@ script.textContent = codigojsdev;
 document.body.appendChild(script);
 }
 if (parametrourl.get('mode') == "more") {
-    document.write('')
+    document.body.style.display = "none";
     const botaogithub = document.createElement("button");
 botao.textContent = "Ver no GitHub";
 
