@@ -1,34 +1,175 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumping Game</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="shortcut icon" href="player192.png" type="image/x-icon">
-</head>
-<body>
-    <button onclick="musicadefundo()">Ativar música de fundo</button> 
-    <button onclick="mododev()">Modo dev</button>
-    <br>
-    <button onclick="telacheia()" id="botaotelacheia">Entrar ou sair do modo de tela cheia</button> <button onclick="mais()">Veja mais</button>
-    <br>
-    <strong id="txtnome">Carregando nome...</strong> <br>
-    <button onclick="apagardados()" style="color: red;">Apagar todos os dados salvos no Jumping Game</button>
-    <img src="player.png" alt="Jogador" id="player">
-    <img src="matar.png" alt="Matar" id="matar" style="transform: translateX(20vh) translateY(15vh)">
-    <img src="matar.png" alt="Matar" id="matar2" style="transform: translateX(70vh) translateY(15vh)">
-    <img src="matar.png" alt="Matar" id="matar3" style="transform: translateX(120vh) translateY(15vh)">
-    <img src="matar.png" alt="Matar" id="matar4" style="transform: translateX(160vh) translateY(15vh)">
-    <img src="matar.png" alt="Matar" id="matar5" style="transform: translateX(200vh) translateY(15vh)">
-    <h1 id="h1ganhar" style="transform:translateY(15vh) translatex(255vh); color:aqua ">FIM</h1> 
-    <p style="transform: translateY(20vh);">Copyright © 2026 Gabriel Brandão. Todos os direitos reservados.</p> 
-      <script src="script.js"></script>
-    <script>if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./sw.js")
-    .then(() => console.log("Service Worker registrado!"))
-    .catch(err => console.error(err));
-}</script>
-</body>
-</html>
+let musicafundo = new Audio('musicadefundo.mp3')
+musicafundo.loop = true
+function musicadefundo () {
+musicafundo.play() ;
+}
+function colide(obj1, obj2) {
+    const r1 = obj1.getBoundingClientRect();
+    const r2 = obj2.getBoundingClientRect();
+
+    return (
+        r1.left < r2.right &&
+        r1.right > r2.left &&
+        r1.top < r2.bottom &&
+        r1.bottom > r2.top
+    );
+}
+const player = document.querySelector("#player");
+const matar = document.getElementById('matar') ;
+const matar2 = document.getElementById('matar2') ;
+const matar3 = document.getElementById('matar3') ;
+const matar4 = document.getElementById('matar4') ;
+const matar5 = document.getElementById('matar5') ;
+let pulando = false ;
+let x = 100;
+let y = 100;
+const velocidade = 5;
+
+document.addEventListener("keydown", (e) => {
+    if (e.code === "ArrowUp") {
+            e.preventDefault();
+        if (pulando == false) {
+            pulando = true;
+            y -= 100;
+        player.style.top = y + "px";
+        setTimeout(() => {
+            y += 100;
+            player.style.top = y + "px";
+            pulando = false ;
+        }, 4000);
+        }
+    
+    }
+    if (e.code === "ArrowLeft") {
+        e.preventDefault();
+        x -= velocidade;
+    }
+    if (e.code === "ArrowRight") {
+        e.preventDefault();
+        x += velocidade;
+    }
+    if (e.code === "Space") {
+        e.preventDefault();
+        if (pulando == false) {
+            pulando = true;
+            y -= 100;
+        player.style.top = y + "px";
+        setTimeout(() => {
+            y += 100;
+            player.style.top = y + "px";
+            pulando = false ;
+        }, 4000);
+        }
+    }
+    player.style.left = x + "px";
+    player.style.top = y + "px";
+});
+function gameLoop() {
+if(colide(matar, player)) {
+    alert('Você perdeu!')
+    location.reload() ;
+}
+if (colide(matar2, player)) {
+    alert('Você perdeu!')
+    location.reload() ;
+}
+if (colide(matar3, player)) {
+    alert('Você perdeu!')
+    location.reload() ;
+}
+if (colide(matar4, player)) {
+    alert('Você perdeu!')
+    location.reload() ;
+}
+if (colide(matar5, player)) {
+    alert('Você perdeu!')
+    location.reload() ;
+}
+
+     requestAnimationFrame(gameLoop);
+}
+ requestAnimationFrame(gameLoop);
+ function telacheia() {
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.documentElement.requestFullscreen();
+    }
+ }
+ const celular = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+ if (celular) {
+    let botaoright = document.createElement("button");
+
+botaoright.textContent = "→";
+
+botaoright.onclick = function () {
+        x += velocidade;
+        player.style.left = x + "px";
+};
+
+document.body.appendChild(botaoright);
+     let botaoleft = document.createElement("button");
+
+botaoleft.textContent = "←";
+
+botaoleft.onclick = function () {
+        x -= velocidade;
+        player.style.left = x + "px";
+};
+     let botaocima = document.createElement("button");
+
+botaocima.textContent = "↑";
+
+botaocima.onclick = function () {
+ y -= 100;
+        player.style.top = y + "px";
+        setTimeout(() => {
+            y += 100;
+            player.style.top = y + "px";
+        }, 4000);
+};
+
+document.body.appendChild(botaoleft);
+document.body.appendChild(botaocima);
+    alert('Bem vindo!\nVersão do jogo: v0.1.9 (Você está um dispositivo móvel)')
+ } else {
+    alert('Bem vindo!\nVersão do jogo: v0.1.9\n(Você está no computador)')
+ }
+ //salvar nome
+ let nome = localStorage.getItem("nome");
+if (!nome) {
+    nome = prompt("Digite seu nome:");
+    localStorage.setItem("nome", nome);
+}
+//usar o nome
+document.getElementById('txtnome').innerText = 'Olá, ' + nome + '! Bem vindo ao Jumping Game!'
+function apagardados() {
+    if (prompt("Se quer apagar todos os dados salvos, digite exatamente “aghu” para confirmar")=== "aghu") {
+     localStorage.clear() ;
+     location.reload() ;
+}
+}
+const parametrourl = new URLSearchParams(window.location.search);
+function mododev() {
+    if (prompt('Senha do modo dev:') == "admin0101") {
+        window.open('https://gabrielbrandaoborbafeitosa-ops.github.io/Jumping-Game/?mode=dev0124')
+    } else {
+        alert('Senha incorreta')
+    }
+}
+if (parametrourl.get('mode') == "dev0124") {
+    let codigojsdev = prompt('js')
+    const script = document.createElement("script");
+script.textContent = codigojsdev;
+document.body.appendChild(script);
+}
+if (parametrourl.get('mode') == "more") {
+    document.body.innerHTML = "";
+    const botaogithub = document.createElement("button");
+botao.textContent = "Ver no GitHub";
+
+document.body.appendChild(botaogithub);
+}
+function mais() {
+    window.open('https://gabrielbrandaoborbafeitosa-ops.github.io/Jumping-Game/?mode=more')
+}
