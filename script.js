@@ -163,13 +163,3 @@ if (parametrourl.get('mode') == "dev0124") {
 script.textContent = codigojsdev;
 document.body.appendChild(script);
 }
-if (parametrourl.get('mode') == "more") {
-    document.body.style.display = "none";
-    const botaogithub = document.createElement("button");
-botao.textContent = "Ver no GitHub";
-
-document.body.appendChild(botaogithub);
-}
-function mais() {
-    window.open('https://gabrielbrandaoborbafeitosa-ops.github.io/Jumping-Game/?mode=more')
-}
