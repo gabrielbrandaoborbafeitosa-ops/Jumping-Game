@@ -134,9 +134,9 @@ document.body.appendChild(botaocima);
 document.addEventListener("DOMContentLoaded", () => {
   player.style.left = (player.offsetLeft - 10) + "px";
 });
-    alert('Bem vindo!\nVersão do jogo: v0.3.10 (Você está um dispositivo móvel)')
+    alert('Bem vindo!\nVersão do jogo: v0.4.10 (Você está um dispositivo móvel)')
  } else {
-    alert('Bem vindo!\nVersão do jogo: v0.3.10(Você está no computador)')
+    alert('Bem vindo!\nVersão do jogo: v0.4.10(Você está no computador)')
  }
  //salvar nome
  let nome = localStorage.getItem("nome");
@@ -165,4 +165,22 @@ if (parametrourl.get('mode') == "dev0124") {
     const script = document.createElement("script");
 script.textContent = codigojsdev;
 document.body.appendChild(script);
+} 
+if (parametrourl.get('mode') == "more") {
+    
+} 
+function mais() {
+window.open('https://gabrielbrandaoborbafeitosa-ops/Jumping-Game/?mode=more')
 }
+if (parametrourl.get('mode') == "more") {
+    document.write('')
+    let botaogithub = document.createElement("button");
+
+botao.innerHTML = "Ver no GitHub";
+
+document.body.appendChild(botaogithub);
+
+botao.onclick = () => {
+  window.open('https://github.com/gabrielbrandaoborbafeitosa-ops/Jumping-Game');
+};
+} 
