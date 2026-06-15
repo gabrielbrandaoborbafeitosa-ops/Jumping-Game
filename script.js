@@ -173,7 +173,7 @@ function mais() {
 window.open('https://gabrielbrandaoborbafeitosa-ops/Jumping-Game/?mode=more')
 }
 if (parametrourl.get('mode') == "more") {
-    document.write('')
+    document.body.style.visibility = "hidden";
     let botaogithub = document.createElement("button");
 
 botao.innerHTML = "Ver no GitHub";
@@ -181,6 +181,6 @@ botao.innerHTML = "Ver no GitHub";
 document.body.appendChild(botaogithub);
 
 botao.onclick = () => {
-  window.open('https://github.com/gabrielbrandaoborbafeitosa-ops/Jumping-Game');
+  window.open('https://github.com/gabrielbrandaoborbafeitosa-ops/Jumping-Game/');
 };
 } 
