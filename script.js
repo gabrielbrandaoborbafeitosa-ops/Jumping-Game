@@ -131,9 +131,9 @@ botaocima.onclick = function () {
 
 document.body.appendChild(botaoleft);
 document.body.appendChild(botaocima);
-    alert('Bem vindo!\nVersão do jogo: v0.1.9 (Você está um dispositivo móvel)')
+    alert('Bem vindo!\nVersão do jogo: v0.2.10 (Você está um dispositivo móvel)')
  } else {
-    alert('Bem vindo!\nVersão do jogo: v0.1.9\n(Você está no computador)')
+    alert('Bem vindo!\nVersão do jogo: v0.2.10(Você está no computador)')
  }
  //salvar nome
  let nome = localStorage.getItem("nome");
