@@ -186,5 +186,9 @@ botao.onclick = () => {
 } 
 
 function mudarjogador() {
+    if (player.src == 'player.png') {
     player.src = 'player2.png'
+    } else {
+        player.src = 'player.png'
+    }
 }
