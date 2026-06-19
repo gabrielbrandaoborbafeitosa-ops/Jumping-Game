@@ -3,9 +3,17 @@
     height: 3cm ;
     position: absolute;
     transition: 1s ;
+    border-radius: 20px;
+
 }
 #matar, #matar2, #matar3, #matar4, #matar5 {
     width: 3cm ;
     height: 3cm ;
     position: absolute;
+    border-radius: 20px;
+
+}
+button {
+    border-radius: 20px;
+
 }
