@@ -132,7 +132,7 @@ botaocima.onclick = function () {
 document.body.appendChild(botaoleft);
 document.body.appendChild(botaocima);
 document.addEventListener("DOMContentLoaded", () => {
-  player.style.left = (player.offsetLeft - 10) + "px";
+  player.style.left = (player.offsetLeft - 20) + "px";
 });
     alert('Bem vindo!\nVersão do jogo: v0.1.12 (Você está um dispositivo móvel)')
  } else {
