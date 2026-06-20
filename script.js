@@ -188,3 +188,8 @@ botao.onclick = () => {
 function mudarjogador() {
     player.src = 'player2.png'
 }
+setInterval(() => {
+  if (document.hidden) {
+alert('Pausado. Clique em OK para continuar')
+  }
+}, 1000);
