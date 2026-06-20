@@ -193,3 +193,8 @@ setInterval(() => {
 alert('Pausado. Clique em OK para continuar')
   }
 }, 1000);
+if (!localStorage.getItem("visitou")) {
+  alert("Bem-vindo(a)! Parece que é a primeira vez que você jogou Jumping Game.\n\nJumping Game significa 'Jogo de Pular', e esse jogo é legal, e, não precisa de internet para funcionar.\n\nBOA SORTE!")
+
+  localStorage.setItem("visitou", "sim");
+}
