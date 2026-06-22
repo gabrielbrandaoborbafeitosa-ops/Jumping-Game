@@ -96,6 +96,7 @@ if (colide(matar5, player)) {
         document.documentElement.requestFullscreen();
     }
  }
+ let nome = localStorage.getItem("nome");
  const celular = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
  if (celular) {
     let botaoright = document.createElement("button");
@@ -134,12 +135,11 @@ document.body.appendChild(botaocima);
 document.addEventListener("DOMContentLoaded", () => {
   player.style.left = (player.offsetLeft - 20) + "px";
 });
-    alert('Bem vindo!\nVersão do jogo: v0.1.12 (Você está um dispositivo móvel)')
+    alert('Bem vindo, ' + nome + '!\nVersão do jogo: v0.1.13 (Você está um dispositivo móvel)')
  } else {
-    alert('Bem vindo!\nVersão do jogo: v0.1.12(Você está no computador)')
+    alert('Bem vindo, ' + nome + '\nVersão do jogo: v0.1.13(Você está no computador)')
  }
  //salvar nome
- let nome = localStorage.getItem("nome");
 if (!nome) {
     nome = prompt("Digite seu nome:");
     localStorage.setItem("nome", nome);
