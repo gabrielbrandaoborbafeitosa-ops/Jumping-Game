@@ -1,17 +1,10 @@
 {
-  "name": "Jumping Game v0.1.13",
-  "short_name": "Jumping Game",
-  "id": "./",
-  "start_url": "./",
+  "name": "Jumping Game",
+  "short_name": "JumpingGame",
+  "start_url": "/Jumping-Game/",
+  "scope": "/Jumping-Game/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#32CD32",
   "icons": [
-    {
-      "src": "player192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
     {
       "src": "player512.png",
       "sizes": "512x512",
